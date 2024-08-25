@@ -6,7 +6,12 @@ const port = process.env.PORT || 3000;
 
 // Middleware to parse JSON requests
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin:
+      "https://66cad65dff6a2464270f135a--calm-piroshki-8c278b.netlify.app/",
+  })
+);
 
 // Helper function for validating input data
 const validateData = (data) => {
