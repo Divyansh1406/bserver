@@ -8,9 +8,11 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://calm-piroshki-8c278b.netlify.app/",
+    origin: "https://calm-piroshki-8c278b.netlify.app",
   })
 );
+
+app.options("*", cors());
 
 // Helper function for validating input data
 const validateData = (data) => {
